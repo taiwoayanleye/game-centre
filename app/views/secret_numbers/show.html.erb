@@ -1,0 +1,14 @@
+<% if @secret_number == @chosen_numbers %>
+	<h1>CONGRATS! YOU WON!</h1>
+	<h4>The secret  <%= @secret_number %></h4>
+	<p><%= image_tag 'games/cat-wins.gif'%></p>
+
+<% else %>
+	<h1>CONGRATS! YOU LOSS!</h1>
+	<h4>The secret  <%= @secret_number %></h4>
+	<p><%= image_tag 'games/cat-wins.gif'%></p>
+<%end%>
+
+<p>
+<h3><%= link_to "PLAY AGAIN", new_secret_number_path %></h3>
+</p>
